@@ -23,13 +23,284 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="basePanel" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Component id="basePanel" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="basePanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="Manager Customer" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="formPanel" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="formPanel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="147" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="formPanel">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="customerPostalCodeLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="headerLabel" pref="838" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="deleteCustomerButton" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="updateCustomerButton" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="createCustomerButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="customerTitleLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                                      <Component id="customerCityLabel" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                                                      <Component id="customerAddressLabel" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="customerPostalCodeField" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
+                                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="customerNameLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                              <Component id="custemerNameFiled" min="-2" pref="191" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                              <Component id="customerAddressField" min="-2" pref="630" max="-2" attributes="0"/>
+                                                              <Group type="102" alignment="1" attributes="0">
+                                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                                      <Group type="102" attributes="0">
+                                                                          <Component id="customerCityField" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                          <EmptySpace max="32767" attributes="0"/>
+                                                                          <Component id="customerProvinceLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                                                      </Group>
+                                                                      <Group type="102" attributes="0">
+                                                                          <Component id="customerTitleField" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                          <EmptySpace max="32767" attributes="0"/>
+                                                                          <Component id="customerDOBLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                                                      </Group>
+                                                                  </Group>
+                                                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                                      <Component id="customerDOBField" alignment="1" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                      <Component id="customerProvinceField" alignment="1" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                  </Group>
+                                                              </Group>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="customerIDLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="customerIdField" min="-2" pref="191" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="headerLabel" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="customerIDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerIdField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="custemerNameFiled" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="customerTitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerTitleField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerDOBLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerDOBField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="customerCityField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerProvinceField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerProvinceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerCityLabel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="customerPostalCodeLabel" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="customerPostalCodeField" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="customerAddressField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="customerAddressLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="createCustomerButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="updateCustomerButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="deleteCustomerButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="headerLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Manager Customer"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerIDLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer ID"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerIdField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerIdFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerTitleLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer Title"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerTitleField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerTitleFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerAddressField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerAddressFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerAddressLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Address"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="custemerNameFiled">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="custemerNameFiledActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerDOBField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerDOBFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerDOBLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Customer DOB"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerCityLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="City"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerCityField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerCityFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerProvinceLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Proovince"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerProvinceField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerProvinceFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerPostalCodeField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerPostalCodeFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerPostalCodeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Postal Code"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="createCustomerButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Save Customer"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="deleteCustomerButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Delete Customer"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCustomerButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="updateCustomerButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Update Customer"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>

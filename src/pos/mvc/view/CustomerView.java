@@ -26,23 +26,301 @@ public class CustomerView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        basePanel = new javax.swing.JPanel();
+        formPanel = new javax.swing.JPanel();
+        headerLabel = new javax.swing.JLabel();
+        customerIDLabel = new javax.swing.JLabel();
+        customerIdField = new javax.swing.JTextField();
+        customerTitleLabel = new javax.swing.JLabel();
+        customerTitleField = new javax.swing.JTextField();
+        customerAddressField = new javax.swing.JTextField();
+        customerAddressLabel = new javax.swing.JLabel();
+        custemerNameFiled = new javax.swing.JTextField();
+        customerNameLabel = new javax.swing.JLabel();
+        customerDOBField = new javax.swing.JTextField();
+        customerDOBLabel = new javax.swing.JLabel();
+        customerCityLabel = new javax.swing.JLabel();
+        customerCityField = new javax.swing.JTextField();
+        customerProvinceLabel = new javax.swing.JLabel();
+        customerProvinceField = new javax.swing.JTextField();
+        customerPostalCodeField = new javax.swing.JTextField();
+        customerPostalCodeLabel = new javax.swing.JLabel();
+        createCustomerButton = new javax.swing.JButton();
+        deleteCustomerButton = new javax.swing.JButton();
+        updateCustomerButton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        basePanel.setName("Manager Customer"); // NOI18N
+
+        headerLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        headerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        headerLabel.setText("Manager Customer");
+
+        customerIDLabel.setText("Customer ID");
+
+        customerIdField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerIdFieldActionPerformed(evt);
+            }
+        });
+
+        customerTitleLabel.setText("Customer Title");
+
+        customerTitleField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerTitleFieldActionPerformed(evt);
+            }
+        });
+
+        customerAddressField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerAddressFieldActionPerformed(evt);
+            }
+        });
+
+        customerAddressLabel.setText("Address");
+
+        custemerNameFiled.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custemerNameFiledActionPerformed(evt);
+            }
+        });
+
+        customerNameLabel.setText("Customer Name");
+
+        customerDOBField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerDOBFieldActionPerformed(evt);
+            }
+        });
+
+        customerDOBLabel.setText("Customer DOB");
+
+        customerCityLabel.setText("City");
+
+        customerCityField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerCityFieldActionPerformed(evt);
+            }
+        });
+
+        customerProvinceLabel.setText("Proovince");
+        customerProvinceLabel.setToolTipText("");
+
+        customerProvinceField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerProvinceFieldActionPerformed(evt);
+            }
+        });
+
+        customerPostalCodeField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerPostalCodeFieldActionPerformed(evt);
+            }
+        });
+
+        customerPostalCodeLabel.setText("Postal Code");
+
+        createCustomerButton.setText("Save Customer");
+
+        deleteCustomerButton.setText("Delete Customer");
+        deleteCustomerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCustomerButtonActionPerformed(evt);
+            }
+        });
+
+        updateCustomerButton.setText("Update Customer");
+
+        javax.swing.GroupLayout formPanelLayout = new javax.swing.GroupLayout(formPanel);
+        formPanel.setLayout(formPanelLayout);
+        formPanelLayout.setHorizontalGroup(
+            formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(formPanelLayout.createSequentialGroup()
+                        .addComponent(customerPostalCodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(formPanelLayout.createSequentialGroup()
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(headerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
+                            .addGroup(formPanelLayout.createSequentialGroup()
+                                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(formPanelLayout.createSequentialGroup()
+                                            .addComponent(deleteCustomerButton)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(updateCustomerButton)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(createCustomerButton))
+                                        .addGroup(formPanelLayout.createSequentialGroup()
+                                            .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(customerTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(customerCityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(customerAddressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(4, 4, 4)
+                                            .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(customerPostalCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGroup(formPanelLayout.createSequentialGroup()
+                                                        .addComponent(customerNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(34, 34, 34)
+                                                        .addComponent(custemerNameFiled, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                        .addComponent(customerAddressField, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGroup(formPanelLayout.createSequentialGroup()
+                                                            .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                .addGroup(formPanelLayout.createSequentialGroup()
+                                                                    .addComponent(customerCityField, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                    .addComponent(customerProvinceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGroup(formPanelLayout.createSequentialGroup()
+                                                                    .addComponent(customerTitleField, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                    .addComponent(customerDOBLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                            .addGap(34, 34, 34)
+                                                            .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(customerDOBField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(customerProvinceField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                    .addGroup(formPanelLayout.createSequentialGroup()
+                                        .addComponent(customerIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(46, 46, 46)
+                                        .addComponent(customerIdField, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
+        );
+        formPanelLayout.setVerticalGroup(
+            formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(formPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(headerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(customerIDLabel)
+                    .addComponent(customerIdField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerNameLabel)
+                    .addComponent(custemerNameFiled, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(customerTitleLabel)
+                    .addComponent(customerTitleField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerDOBLabel)
+                    .addComponent(customerDOBField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(customerCityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerProvinceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerProvinceLabel)
+                    .addComponent(customerCityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(customerPostalCodeLabel)
+                    .addGroup(formPanelLayout.createSequentialGroup()
+                        .addComponent(customerPostalCodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(customerAddressField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(customerAddressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createCustomerButton)
+                    .addComponent(updateCustomerButton)
+                    .addComponent(deleteCustomerButton))
+                .addGap(16, 16, 16))
+        );
+
+        javax.swing.GroupLayout basePanelLayout = new javax.swing.GroupLayout(basePanel);
+        basePanel.setLayout(basePanelLayout);
+        basePanelLayout.setHorizontalGroup(
+            basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(basePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(formPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        basePanelLayout.setVerticalGroup(
+            basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(basePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(formPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(147, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(basePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(basePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void customerIdFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerIdFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerIdFieldActionPerformed
+
+    private void customerTitleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerTitleFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerTitleFieldActionPerformed
+
+    private void customerAddressFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerAddressFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerAddressFieldActionPerformed
+
+    private void custemerNameFiledActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custemerNameFiledActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_custemerNameFiledActionPerformed
+
+    private void customerDOBFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerDOBFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerDOBFieldActionPerformed
+
+    private void customerCityFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerCityFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerCityFieldActionPerformed
+
+    private void customerProvinceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerProvinceFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerProvinceFieldActionPerformed
+
+    private void customerPostalCodeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerPostalCodeFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerPostalCodeFieldActionPerformed
+
+    private void deleteCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustomerButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteCustomerButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel basePanel;
+    private javax.swing.JButton createCustomerButton;
+    private javax.swing.JTextField custemerNameFiled;
+    private javax.swing.JTextField customerAddressField;
+    private javax.swing.JLabel customerAddressLabel;
+    private javax.swing.JTextField customerCityField;
+    private javax.swing.JLabel customerCityLabel;
+    private javax.swing.JTextField customerDOBField;
+    private javax.swing.JLabel customerDOBLabel;
+    private javax.swing.JLabel customerIDLabel;
+    private javax.swing.JTextField customerIdField;
+    private javax.swing.JLabel customerNameLabel;
+    private javax.swing.JTextField customerPostalCodeField;
+    private javax.swing.JLabel customerPostalCodeLabel;
+    private javax.swing.JTextField customerProvinceField;
+    private javax.swing.JLabel customerProvinceLabel;
+    private javax.swing.JTextField customerTitleField;
+    private javax.swing.JLabel customerTitleLabel;
+    private javax.swing.JButton deleteCustomerButton;
+    private javax.swing.JPanel formPanel;
+    private javax.swing.JLabel headerLabel;
+    private javax.swing.JButton updateCustomerButton;
     // End of variables declaration//GEN-END:variables
 }
