@@ -53,7 +53,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="formPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="147" max="32767" attributes="0"/>
+                  <EmptySpace pref="50" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -67,10 +67,6 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="customerPostalCodeLabel" min="-2" pref="111" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="headerLabel" pref="838" max="32767" attributes="0"/>
@@ -81,46 +77,58 @@
                                                   <Component id="deleteCustomerButton" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="updateCustomerButton" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="createCustomerButton" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="customerTitleLabel" min="-2" pref="111" max="-2" attributes="0"/>
-                                                      <Component id="customerCityLabel" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
-                                                      <Component id="customerAddressLabel" alignment="0" min="-2" pref="153" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="customerPostalCodeField" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
-                                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                          <Group type="102" attributes="0">
-                                                              <Component id="customerNameLabel" min="-2" pref="111" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                                              <Component id="custemerNameFiled" min="-2" pref="191" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="customerTitleLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                                              <Component id="customerCityLabel" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                              <Component id="customerAddressField" min="-2" pref="630" max="-2" attributes="0"/>
-                                                              <Group type="102" alignment="1" attributes="0">
-                                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                                      <Group type="102" attributes="0">
-                                                                          <Component id="customerCityField" min="-2" pref="191" max="-2" attributes="0"/>
-                                                                          <EmptySpace max="32767" attributes="0"/>
-                                                                          <Component id="customerProvinceLabel" min="-2" pref="111" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                      <Group type="102" attributes="0">
-                                                                          <Component id="customerTitleField" min="-2" pref="191" max="-2" attributes="0"/>
-                                                                          <EmptySpace max="32767" attributes="0"/>
-                                                                          <Component id="customerDOBLabel" min="-2" pref="111" max="-2" attributes="0"/>
-                                                                      </Group>
+                                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="customerAddressLabel" min="-2" pref="153" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="customerNameLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                          <Component id="custemerNameFiled" min="-2" pref="191" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                          <Component id="customerAddressField" alignment="0" min="-2" pref="630" max="-2" attributes="0"/>
+                                                          <Group type="102" alignment="1" attributes="0">
+                                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                                  <Group type="102" alignment="0" attributes="0">
+                                                                      <Component id="customerPostalCodeField" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                      <EmptySpace max="32767" attributes="0"/>
+                                                                      <Component id="customerZipCodeLabel" min="-2" pref="111" max="-2" attributes="0"/>
                                                                   </Group>
-                                                                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                                      <Component id="customerDOBField" alignment="1" min="-2" pref="191" max="-2" attributes="0"/>
-                                                                      <Component id="customerProvinceField" alignment="1" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                  <Group type="102" attributes="0">
+                                                                      <Component id="customerCityField" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                      <EmptySpace max="32767" attributes="0"/>
+                                                                      <Component id="customerProvinceLabel" min="-2" pref="111" max="-2" attributes="0"/>
+                                                                  </Group>
+                                                                  <Group type="102" attributes="0">
+                                                                      <Component id="customerTitleField" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                      <EmptySpace max="32767" attributes="0"/>
+                                                                      <Component id="customerDOBLabel" min="-2" pref="111" max="-2" attributes="0"/>
                                                                   </Group>
                                                               </Group>
+                                                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                                  <Component id="customerDOBField" alignment="1" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                  <Component id="customerProvinceField" alignment="1" min="-2" pref="191" max="-2" attributes="0"/>
+                                                                  <Component id="customerZipCodeField" min="-2" pref="191" max="-2" attributes="0"/>
+                                                              </Group>
                                                           </Group>
+                                                          <Component id="customerSalaryField" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -135,6 +143,13 @@
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="customerPostalCodeLabel" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <Component id="customerSalaryLabel" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -169,16 +184,23 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="customerPostalCodeLabel" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="customerPostalCodeField" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="customerAddressField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="customerAddressLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="customerPostalCodeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="customerZipCodeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="customerZipCodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="customerSalaryLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerSalaryField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="customerAddressField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customerAddressLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="92" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="createCustomerButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="updateCustomerButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -284,6 +306,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Save Customer"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createCustomerButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="deleteCustomerButton">
               <Properties>
@@ -296,6 +321,27 @@
             <Component class="javax.swing.JButton" name="updateCustomerButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Customer"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerZipCodeField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerZipCodeFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerSalaryLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salary"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="customerSalaryField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customerSalaryFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="customerZipCodeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Zip Code"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
           </SubComponents>

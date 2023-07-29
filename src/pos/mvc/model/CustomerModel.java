@@ -19,6 +19,23 @@ public class CustomerModel {
     private String province;
     private String zip;
 
+    public CustomerModel() {
+    }
+
+    public CustomerModel(String custId, String title, String name, String dob, Double salary, String address, String city, String province, String zip) {
+        this.custId = custId;
+        this.title = title;
+        this.name = name;
+        this.dob = dob;
+        this.salary = salary;
+        this.address = address;
+        this.city = city;
+        this.province = province;
+        this.zip = zip;
+    }
+    
+      
+
     /**
      * @return the custId
      */
