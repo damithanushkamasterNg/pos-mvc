@@ -157,6 +157,11 @@ public class CustomerView extends javax.swing.JFrame {
         });
 
         updateCustomerButton.setText("Update Customer");
+        updateCustomerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateCustomerButtonActionPerformed(evt);
+            }
+        });
 
         customerZipCodeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,6 +191,11 @@ public class CustomerView extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        customerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                customerTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(customerTable);
 
         javax.swing.GroupLayout customerDataViewLayout = new javax.swing.GroupLayout(customerDataView);
@@ -389,7 +399,7 @@ public class CustomerView extends javax.swing.JFrame {
     }//GEN-LAST:event_customerPostalCodeFieldActionPerformed
 
     private void deleteCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustomerButtonActionPerformed
-        // TODO add your handling code here:
+        deleteCustomer();
     }//GEN-LAST:event_deleteCustomerButtonActionPerformed
 
     private void createCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCustomerButtonActionPerformed
@@ -403,6 +413,14 @@ public class CustomerView extends javax.swing.JFrame {
     private void customerSalaryFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerSalaryFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_customerSalaryFieldActionPerformed
+
+    private void customerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customerTableMouseClicked
+        searchParicularCustomer();
+    }//GEN-LAST:event_customerTableMouseClicked
+
+    private void updateCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateCustomerButtonActionPerformed
+        updateCustomer();
+    }//GEN-LAST:event_updateCustomerButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -437,7 +455,6 @@ public class CustomerView extends javax.swing.JFrame {
     private javax.swing.JButton updateCustomerButton;
     // End of variables declaration//GEN-END:variables
 
-    
     /**
      * save customer data
      */
@@ -479,7 +496,7 @@ public class CustomerView extends javax.swing.JFrame {
     }
 
     /**
-     *load existing customers
+     * load existing customers
      */
     private void loadAllCustomers() {
 
@@ -505,4 +522,73 @@ public class CustomerView extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * search paricular customer using id
+     */
+    private void searchParicularCustomer() {
+        try {
+            String custId = customerTable.getValueAt(customerTable.getSelectedRow(), 0).toString();
+            CustomerModel customerModel = customerController.getCustomerById(custId);
+
+            if (customerModel != null) {
+                customerIdField.setText(customerModel.getCustId());
+                customerTitleField.setText(customerModel.getTitle());
+                custemerNameFiled.setText(customerModel.getName());
+                customerDOBField.setText(customerModel.getDob());
+                customerSalaryField.setText(Double.toString(customerModel.getSalary()));
+                customerAddressField.setText(customerModel.getAddress());
+                customerCityField.setText(customerModel.getCity());
+                customerProvinceField.setText(customerModel.getProvince());
+                customerZipCodeField.setText(customerModel.getZip());
+            } else {
+                JOptionPane.showMessageDialog(this, "Customer Not Found");
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }
+
+    /**
+     * update customer
+     */
+    public void updateCustomer() {
+        try {
+            CustomerModel customer = new CustomerModel(
+                    customerIdField.getText(),
+                    customerTitleField.getText(),
+                    custemerNameFiled.getText(),
+                    customerDOBField.getText(),
+                    Double.parseDouble(customerSalaryField.getText()),
+                    customerAddressField.getText(),
+                    customerCityField.getText(),
+                    customerProvinceField.getText(),
+                    customerZipCodeField.getText());
+
+            String resp = customerController.updateCustomer(customer);
+            JOptionPane.showMessageDialog(this, resp);
+            clear();
+            loadAllCustomers();
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /**
+     * delete customers
+     */
+    private void deleteCustomer(){
+        try {
+            String custId = customerTable.getValueAt(customerTable.getSelectedRow(), 0).toString();
+            String resp = customerController.deleteCustomer(custId);
+            clear();
+            loadAllCustomers();
+            JOptionPane.showMessageDialog(this, resp);
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+
+    }
 }

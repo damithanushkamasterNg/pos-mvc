@@ -328,6 +328,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Update Customer"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateCustomerButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="customerZipCodeField">
               <Events>
@@ -391,6 +394,9 @@
                           </Table>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="customerTableMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
