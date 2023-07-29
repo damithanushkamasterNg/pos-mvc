@@ -4,7 +4,14 @@
  */
 package pos.mvc.view;
 
+import java.sql.*;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import pos.mvc.controller.CustomerController;
 import pos.mvc.model.CustomerModel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -12,11 +19,15 @@ import pos.mvc.model.CustomerModel;
  */
 public class CustomerView extends javax.swing.JFrame {
 
+    private CustomerController customerController;
+
     /**
      * Creates new form CustomerView
      */
     public CustomerView() {
+        this.customerController = new CustomerController();
         initComponents();
+        loadAllCustomers();
     }
 
     /**
@@ -54,6 +65,9 @@ public class CustomerView extends javax.swing.JFrame {
         customerSalaryLabel = new javax.swing.JLabel();
         customerSalaryField = new javax.swing.JTextField();
         customerZipCodeLabel = new javax.swing.JLabel();
+        customerDataView = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        customerTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -161,6 +175,36 @@ public class CustomerView extends javax.swing.JFrame {
         customerZipCodeLabel.setText("Zip Code");
         customerZipCodeLabel.setToolTipText("");
 
+        customerTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(customerTable);
+
+        javax.swing.GroupLayout customerDataViewLayout = new javax.swing.GroupLayout(customerDataView);
+        customerDataView.setLayout(customerDataViewLayout);
+        customerDataViewLayout.setHorizontalGroup(
+            customerDataViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerDataViewLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 775, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        customerDataViewLayout.setVerticalGroup(
+            customerDataViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerDataViewLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout formPanelLayout = new javax.swing.GroupLayout(formPanel);
         formPanel.setLayout(formPanelLayout);
         formPanelLayout.setHorizontalGroup(
@@ -170,7 +214,7 @@ public class CustomerView extends javax.swing.JFrame {
                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(formPanelLayout.createSequentialGroup()
                         .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(headerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
+                            .addComponent(headerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(formPanelLayout.createSequentialGroup()
                                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -227,8 +271,9 @@ public class CustomerView extends javax.swing.JFrame {
                     .addGroup(formPanelLayout.createSequentialGroup()
                         .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(customerPostalCodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(customerSalaryLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(customerSalaryLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(customerDataView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 51, Short.MAX_VALUE))))
         );
         formPanelLayout.setVerticalGroup(
             formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +313,9 @@ public class CustomerView extends javax.swing.JFrame {
                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(customerAddressField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(customerAddressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(customerDataView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(createCustomerButton)
                     .addComponent(updateCustomerButton)
@@ -290,7 +337,7 @@ public class CustomerView extends javax.swing.JFrame {
             .addGroup(basePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(formPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -301,7 +348,9 @@ public class CustomerView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(basePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(basePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -366,6 +415,7 @@ public class CustomerView extends javax.swing.JFrame {
     private javax.swing.JLabel customerCityLabel;
     private javax.swing.JTextField customerDOBField;
     private javax.swing.JLabel customerDOBLabel;
+    private javax.swing.JPanel customerDataView;
     private javax.swing.JLabel customerIDLabel;
     private javax.swing.JTextField customerIdField;
     private javax.swing.JLabel customerNameLabel;
@@ -375,6 +425,7 @@ public class CustomerView extends javax.swing.JFrame {
     private javax.swing.JLabel customerProvinceLabel;
     private javax.swing.JTextField customerSalaryField;
     private javax.swing.JLabel customerSalaryLabel;
+    private javax.swing.JTable customerTable;
     private javax.swing.JTextField customerTitleField;
     private javax.swing.JLabel customerTitleLabel;
     private javax.swing.JTextField customerZipCodeField;
@@ -382,21 +433,76 @@ public class CustomerView extends javax.swing.JFrame {
     private javax.swing.JButton deleteCustomerButton;
     private javax.swing.JPanel formPanel;
     private javax.swing.JLabel headerLabel;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton updateCustomerButton;
     // End of variables declaration//GEN-END:variables
 
+    
+    /**
+     * save customer data
+     */
     private void saveCustomerData() {
         CustomerModel customerModel = new CustomerModel(customerIdField.getText(),
-                customerTitleField.getText(), 
-                custemerNameFiled.getText(), 
-                customerDOBField.getText(), 
+                customerTitleField.getText(),
+                custemerNameFiled.getText(),
+                customerDOBField.getText(),
                 Double.parseDouble(customerSalaryField.getText()),
-                customerAddressField.getText(), 
-                customerCityField.getText(), 
+                customerAddressField.getText(),
+                customerCityField.getText(),
                 customerProvinceField.getText(),
                 customerZipCodeField.getText());
-        
-        System.out.println("customer: " + customerModel.toString());
+
+        try {
+            String resp = customerController.saveCustomer(customerModel);
+            JOptionPane.showMessageDialog(this, resp);
+            clear();
+            loadAllCustomers();
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
     }
-    
+
+    /**
+     * clear customer form data
+     */
+    private void clear() {
+        customerIdField.setText("");
+        customerTitleField.setText("");
+        custemerNameFiled.setText("");
+        customerDOBField.setText("");
+        customerSalaryField.setText("");
+        customerAddressField.setText("");
+        customerCityField.setText("");
+        customerProvinceField.setText("");
+        customerZipCodeField.setText("");
+    }
+
+    /**
+     *load existing customers
+     */
+    private void loadAllCustomers() {
+
+        try {
+            String[] collumns = {"Id", "Name", "Address", "Salary", "Postal Code"};
+            DefaultTableModel dtm = new DefaultTableModel(collumns, 0) {
+                @Override
+                public boolean isCellEditable(int row, int column) {
+                    return false;
+                }
+            };
+            customerTable.setModel(dtm);
+
+            ArrayList<CustomerModel> customers = customerController.getAllCustomers();
+
+            for (CustomerModel customer : customers) {
+                Object[] rowData = {customer.getCustId(), customer.getTitle() + " " + customer.getName(), customer.getAddress() + ", " + customer.getCity(), customer.getSalary(), customer.getZip()};
+                dtm.addRow(rowData);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }
+
 }
