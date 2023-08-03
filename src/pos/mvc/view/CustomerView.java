@@ -419,7 +419,7 @@ public class CustomerView extends javax.swing.JFrame {
     }//GEN-LAST:event_customerTableMouseClicked
 
     private void updateCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateCustomerButtonActionPerformed
-        updateCustomer();
+        this.updateCustomer();
     }//GEN-LAST:event_updateCustomerButtonActionPerformed
 
 
@@ -578,7 +578,7 @@ public class CustomerView extends javax.swing.JFrame {
     /**
      * delete customers
      */
-    private void deleteCustomer(){
+    private void deleteCustomer() {
         try {
             String custId = customerTable.getValueAt(customerTable.getSelectedRow(), 0).toString();
             String resp = customerController.deleteCustomer(custId);
