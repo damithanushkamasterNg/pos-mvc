@@ -16,7 +16,7 @@ public class PosMvc {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       new ItemView().setVisible(true);
+       new OrderView().setVisible(true);
     }
     
 }
